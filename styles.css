@@ -35,8 +35,7 @@ body {
 }
 
 img {
-    height: 100%;
-    width: 50%;
+    object-fit: cover;
 }
 
 .div-product-information {
@@ -143,6 +142,3 @@ h2 {
     .discounted-price {
         font-size: 1.8rem;
     }
-
-
-}
