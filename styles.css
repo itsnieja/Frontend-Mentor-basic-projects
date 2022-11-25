@@ -1,0 +1,112 @@
+:root {
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+div {
+    border: 1px solid red;
+}
+
+body {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* menu styling */
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1000px;
+    padding: 2rem;
+}
+
+.menu-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: var(--grayish-blue);
+}
+
+.menu-links  a:hover {
+    color: var(--Soft-red);
+}
+
+
+
+/* main grid */
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 40% 25% 35%;
+    height: 700px;
+    width: 1000px;
+    margin: 0 auto;
+    column-gap: 1.5rem;
+}
+
+.big-img-container {
+    overflow: hidden;
+    grid-column: span 2;
+}
+
+.main-img  {
+    width: 100%;
+}
+
+.news {
+    grid-row: span 2;
+}
+
+.bright-future {
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.bright-future p {
+ margin-top: 0px;
+ margin-left: 0px;
+ width: 80%;
+ font-family: "Inter";
+}
+
+.button {
+    background: var(--Soft-red);
+    width: 50%;
+    height: 25%;
+}
+.read-more {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* article styling */
+.article {
+    display: flex;
+    height: 140px;
+    margin-top: 30px;
+}
+
+
+
+
+
