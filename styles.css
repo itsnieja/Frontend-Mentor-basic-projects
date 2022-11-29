@@ -1,0 +1,136 @@
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+
+
+    --article-margin: 2rem;
+}
+
+* {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* containers and articles styling */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+.container {
+    width: calc(300px * 3 + 2 * 25px);
+    height: 570px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .article {
+        margin-top: 2rem;
+    }
+}
+
+.articles-container {
+    display: flex;
+    height: 75%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.article {
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
+    box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;  
+}
+
+/* text styling */
+h1, h2 {
+    color: var(--Very-Dark-Blue);
+}
+h1 {
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 0.8rem;
+    color: var(--Grayish-Blue);
+}
+
+.article-header {
+    color: var(--Very-Dark-Blue);
+    font-weight: 600;
+    margin-left: var(--article-margin);
+    margin-top: var(--article-margin);
+}
+
+.article-info {
+    color: var(--Grayish-Blue);
+    margin-left: var(--article-margin);
+    margin-right: 3rem;
+    font-size: 0.75rem;
+}
+
+.article-img {
+    float: right;
+    margin-right: var(--article-margin);
+    margin-top: 2rem;
+    height: 4rem;
+}
+
+.n1 {
+    border-top: 0.3rem solid var(--Cyan);
+}
+
+.n2 {
+    border-top: 0.3rem solid var(--Red);
+}
+
+.n3 {
+    border-top: 0.3rem solid var(--Orange);
+}
+
+.n4 {
+    border-top: 0.3rem solid var(--Blue);
+}
+
+
+/* footer */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
