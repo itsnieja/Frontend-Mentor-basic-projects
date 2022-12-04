@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | News homepage</title>
+
+</head>
+<body>
+  <nav>
+    <img class="logo" src="/assets/images/logo.svg" alt="logo">
+    
+    <ul>
+      <li><a href="#" class="menu-links">Home</a></li>
+      <li><a href="#" class="menu-links">New</a></li>
+      <li><a href="#" class="menu-links">Popular</a></li>
+      <li><a href="#" class="menu-links">Trending</a></li>
+      <li><a href="#" class="menu-links">Categories</a></li>
+    </ul>
+
+    <img class="hamburger-icon" src="assets/images/icon-menu.svg" alt="menu-open">
+  </nav>
+
+
+  <script>
+    const Menu = document.querySelector('ul');
+    const HamburgerBTN = document.querySelector('.hamburger-icon');
+
+    HamburgerBTN.addEventListener('click', () =>{
+      Menu.classList.toggle('active');
+      HamburgerBTN.classList.toggle('close');      
+    });
+
+
+  </script>
+
+
+
+  <div class="main-grid">
+    <div class="big-img-container">
+      <img class="main-img" src="assets/images/image-web-3-desktop.jpg" alt="main-img">
+    </div>
+    <div class="news">
+        <p class="header">
+          New
+        </p>
+      <div>
+        <a class="news-heading">
+          <p>
+            Hydrogen VS Electric Cars
+          </p>
+        </a>
+          <p class="news-info">
+            Will hydrogen-fueled cars ever catch up to EVs?
+          </p>
+        </div>
+
+      <div>
+        <a class="news-heading">
+          <p>
+            The Downsides of AI Artistry
+          </p>
+        </a>
+        <p class="news-info">
+          What are the possible adverse effects of on-demand AI image generation?
+        </p>
+      </div>
+
+      <div>
+        <a class="news-heading">
+          <p>
+            Is VC Funding Drying Up?
+          </p>
+        </a>
+        <p class="news-info">
+          Private funding by VC firms is down 50% YOY. We take a look at what that means.
+        </p>
+      </div>
+    </div>
+    <div class="bright-future">
+      <p>  
+        The Bright Future of Web 3.0?
+      </p>
+    </div>
+    <div class="read-more">
+      <p class="read-more-p" >
+        We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+        But is it really fulfilling its promise?
+      </p>
+      <a class="button" href="#">
+        <div>
+          <p>
+            READ MORE
+          </p>
+        </div>
+      </a>
+    </div>
+    <div class="article first">
+      <img class="article-img" src="assets/images/image-retro-pcs.jpg" alt="retro pc">
+      <div>
+        <p class="number">01</p>
+        <a class="article-heading">
+          <p>
+            Reviving Retro PCs
+          </p>
+        </a>
+        <p class="article-info">
+          What happens when old PCs are given modern upgrades?
+        </p>
+      </div>
+    </div>
+
+    <div class="article second">
+      <img class="article-img" src="assets/images/image-top-laptops.jpg" alt="different laptops">
+      <div>
+        <p class="number">02</p>
+        <a class="article-heading">
+          <p>
+            Top 10 Laptops of 2022
+          </p>
+        </a>
+        <p class="article-info">
+          Our best picks for various needs and budgets.
+        </p>
+      </div>
+    </div>
+    
+    <div class="article third">
+      <img class="article-img" src="assets/images/image-gaming-growth.jpg" alt="gaming pad">
+      <div>
+        <p class="number">03</p>
+        <a class="article-heading">
+          <p>
+            The Growth of Gaming
+          </p>
+        </a>
+          <p class="article-info">
+            How the pandemic has sparked fresh opportunities.
+          </p>
+      </div>
+    </div>
+
+  </div>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>

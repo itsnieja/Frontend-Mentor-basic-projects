@@ -1,0 +1,275 @@
+:root {
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+body {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* menu styling */
+
+nav {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    font-family: "Inter";
+    padding: 2rem 0;
+}
+
+ul {
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+}
+
+ul a {
+    text-decoration: none;
+    color: var(--grayish-blue);
+}
+
+ul a:hover {
+    color: var(--Soft-red);
+}
+
+.hamburger-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.close {
+    content: url(/assets/images/icon-menu-close.svg);
+}
+
+
+
+/* main grid */
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 40% 35% 25%;
+    height: 600px;
+    width: 1000px;
+    margin: 0 auto;
+    column-gap: 1.5rem;
+}
+
+.big-img-container {
+    overflow: hidden;
+    grid-column: span 2;
+}
+
+.main-img  {
+    width: 100%;
+}
+
+/* news styling */
+.news {
+    grid-row: span 2;
+    height: 93%;
+    background: var(--Very-dark-blue);
+    color: var(--off-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Inter";
+}
+
+.news-info {
+    color: var(--grayish-blue);
+    font-size: 0.9rem;
+}
+
+.news div {
+    margin: 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--grayish-blue);
+}
+
+.news div:last-of-type {
+    border: none;
+    padding-bottom: 1.5rem;
+}
+
+.header {
+    font-size: 2rem;
+    color: var(--Soft-orange);
+    margin: 1rem;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+
+.news-heading {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--off-white);
+
+}
+
+.news-heading:hover {
+    color: var(--Soft-orange);
+}
+
+/* other articles */
+
+.bright-future {
+    font-weight: 800;
+    font-size: 2.8rem;
+}
+
+.bright-future p {
+    margin-top: 1rem;
+    margin-left: 0px;
+    width: 80%;
+     font-family: "Inter";
+}
+
+.button {
+    background: var(--Soft-red);
+    width: 50%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    letter-spacing: 3px;
+    color: var(--off-white);
+    text-decoration: none;
+}
+
+.button:hover {
+    background: var(--Very-dark-blue);
+}
+
+.read-more {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Inter";
+    color: var(--Dark-grayish-blue);
+    font-size: 0.85rem;
+}
+.read-more-p {
+    margin-top: 1.5rem;
+}
+
+/* article styling */
+.article {
+    display: flex;
+    margin-top: 30px;
+    font-family: "Inter";
+}
+
+.number {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--grayish-blue);
+    margin: 0;
+}
+
+.article-heading {
+    font-weight: 800;
+}
+
+.article-heading:hover {
+    color: var(--Soft-red);
+}
+
+.article-info {
+    font-size: 0.85rem;
+    color: var(--Dark-grayish-blue);
+}
+
+.article div {
+    margin-left: 1rem;
+}
+
+
+/* responsivenes */
+
+@media (max-width: 1000px) {
+    .main-grid {
+        width: 600px;
+        height: min-content;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        
+    }
+
+    nav {
+        width: 600px;
+    }
+
+    
+}
+
+@media (max-width: 600px) {
+    .main-grid {
+        width: 375px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .main-img {
+        content: url(assets/images/image-web-3-mobile.jpg);
+    }
+
+    .article-img {
+        height: 120px;
+        object-fit: cover;
+    }
+
+    .hamburger-icon {
+        display: block;
+        z-index: 9999;
+    }
+
+    .hamburger-icon:active {
+        content: url(/assets/images/icon-menu-close.svg);
+    }
+    
+    nav {
+        width: 375px;
+    }
+
+    ul {
+        /* display: none; */
+        flex-direction: column;
+        position: absolute;
+        background: var(--off-white);
+        height: 100vh;
+        width: 66vw;
+        right: 0;
+        top: 0;
+        gap: 3rem;
+        padding-top: 12rem;
+        transform: translate(100%);
+    }
+
+    ul.active {
+        transform: translate(0%);
+    }
+
+    ul a {
+        font-size: 1.2rem;
+        color: black;
+    }
+}
